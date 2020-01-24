@@ -1,0 +1,28 @@
+.o-footer {
+    $p: &;
+  
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    background: $color-green2;
+    padding: calculateEm(20px,16px) 0 calculateEm(20px,16px);
+    font-size: 1rem;
+    color: $white;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+  
+    p {
+      font-size: calculateRem(14px);
+    }
+
+    b {
+        display: block;
+        margin-bottom: calculateEm(10px, 16px);
+    }
+
+    a {
+        color: $white;
+    }
+  }

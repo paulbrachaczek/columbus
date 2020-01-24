@@ -1,0 +1,9 @@
+.-read-more {
+    text-decoration: underline;
+    &:after {
+        content: ">";
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}

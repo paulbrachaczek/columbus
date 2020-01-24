@@ -1,0 +1,28 @@
+.m-cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 0 0 280px;
+
+    @include media-breakpoint-down(md) {
+        flex: 0 0 auto;
+        text-align: right;
+    }
+
+    p {
+        margin: 0;
+        flex: 0 0 100%;
+
+        @include media-breakpoint-up(md) {
+            flex: 0 0 50%;
+        }
+    }
+
+    .a-button {
+        margin: 0;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+}

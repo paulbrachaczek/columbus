@@ -1,0 +1,10 @@
+.o-header {
+    margin:  calculateEm(30px, 16px) 0;
+
+    > .container {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       margin-bottom: calculateEm(30px, 16px);
+    }
+}

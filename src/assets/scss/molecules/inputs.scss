@@ -1,0 +1,174 @@
+.m-input {
+    $p : &;
+    position: relative;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: calculateRem(16px);
+    margin: calculateEm(15px, 16px) 0;
+    padding: 0;
+    align-items: center;
+    -ms-flex-pack: justify;
+  
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-text-fill-color: $text-color;
+      -webkit-box-shadow: 0 0 0px 1000px $white inset;
+    }
+  
+    label {
+      margin: calculateEm(5px, 20px) 0;
+      font-size: calculateRem(20px);
+      color: $text-color;
+      width: 100%;
+      text-align: left;
+      padding: 0 calculateEm(10px, 20px);
+      @include media-breakpoint-up(sm) {
+        padding: 0 calculateEm(20px, 20px);
+      }
+      @include media-breakpoint-up(md) {
+        max-width: calculateEm(130px, 20px);
+        padding: 0;
+      }
+    }
+  
+    .a-error-message {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      order: 3;
+      color: $error-message;
+      font-size: calculateRem(16px);
+      line-height: 1;
+      @include media-breakpoint-up(sm) {
+        position: absolute;
+        bottom: 0;
+        right: calculateEm(10px, 16px);
+        padding: 0;
+        width: auto;
+        @include translate(0, 50%);
+      }
+      @include media-breakpoint-up(md) {
+        right: calculateEm(0px, 16px);
+      }
+    }    
+  
+    &.-text {
+
+      input[type='text'] {
+        outline: none;
+        height: calculateEm(40px, 16px);
+        width: 100%;
+        font-size: calculateRem(16px);
+        line-height: 1.4;
+        border: none;
+        border: 1px solid $input-border;
+        margin: 0;
+        padding: calculateEm(5px, 16px) calculateEm(10px, 16px);
+        background: $white;
+        font-family: $font-default;
+        @include transition(all 0.15s linear 0s);
+  
+        &:focus {
+          border-color: $input-border-active;
+        }
+      }
+  
+    }
+  
+    &.-select {
+  
+      .a-error-message {
+        @include media-breakpoint-up(sm) {
+          right: calculateEm(40px, 12px);
+        }
+        @include media-breakpoint-up(md) {
+          right: calculateEm(65px, 12px);
+        }
+      }
+  
+      @extend .icon-basket;
+      &:before {
+        font-family: "icons";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: calculateEm(20px, 12px);
+        margin-right: .4em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        margin-left: .4em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        top: calculateEm(32px, 16px);
+        right: calculateEm(5px, 16px);
+        height: calculateEm(36px, 16px);
+        line-height: calculateEm(36px, 16px);
+        pointer-events: none;
+        color: $primary-color;
+  
+        @include media-breakpoint-up(md) {
+          top: 1px;
+          right: calculateEm(30px, 16px);
+        }
+      }
+  
+      select {
+        outline: none;
+        -webkit-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        height: calculateEm(36px, 12px);
+        width: 100%;
+        font-size: calculateRem(12px);
+        border: 1px solid $input-border;
+        border-radius: calculateEm(18px, 12px);
+        margin: 0;
+        padding: 0 calculateEm(20px, 12px);
+        background: transparent;
+        order: 3;
+        @include transition(all 0.15s linear 0s);
+  
+        &::-ms-expand {
+          display: none;
+        }
+  
+        &:focus {
+          border-color: $input-border-active;
+          outline: none;
+        }
+  
+        &:-moz-focusring {
+          color: transparent;
+          text-shadow: 0 0 0 #000;
+        }
+  
+        &:active {
+          outline: none;
+        }
+  
+        @include media-breakpoint-up(md) {
+          max-width: calculateEm(370px, 12px);
+        }
+      }
+    }
+  
+  
+  }

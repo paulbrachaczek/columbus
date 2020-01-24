@@ -1,0 +1,23 @@
+.m-grid {
+    margin: 0 calculateEm(-10px, 16px);;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__col {
+       flex: 0 0 100%;
+       padding: 0 calculateEm(10px, 16px);;
+       margin: calculateEm(10px, 16px) 0;
+
+       @include media-breakpoint-up(md) {
+            flex-basis: 0;
+            flex-grow: 1;
+            margin: 0;
+        }
+
+       &.-col-6 {
+            @include media-breakpoint-up(md) {
+                flex: 0 0 50%;
+            }   
+       }
+    }
+}

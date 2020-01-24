@@ -1,0 +1,7 @@
+.o-main {
+    >.container {
+        margin: calculateEm(30px, 16px) auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

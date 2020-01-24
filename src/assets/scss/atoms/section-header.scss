@@ -1,0 +1,8 @@
+.a-section-header {
+    text-transform: uppercase;
+    margin: calculateEm(20px, 40px) 0 calculateEm(50px, 40px);
+    padding: 0;
+    font-size: calculateRem(26px);
+    font-weight: $normal;
+    letter-spacing: 0.03em;
+}

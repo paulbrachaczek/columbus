@@ -1,0 +1,10 @@
+.a-logo {
+    display: inline-flex;
+    max-width: 120px;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        max-width: 240px;
+        margin: 0;
+    }
+}

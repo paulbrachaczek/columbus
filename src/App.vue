@@ -1,29 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Header :items="items" :summary="summary"/>
+    <Main @update="update"/>
+    <Footer/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from './layout/Header.vue';
+import Footer from './layout/Footer.vue';
+import Main from './layout/Main.vue';
 
 @Component({
   components: {
-    HelloWorld
+    Header,
+    Footer,
+    Main
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  items = 0;
+  summary = 0;
+
+  update(price: number) {
+    this.items += 1;
+    this.summary += price;
+  }
+}
+
+
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import '@/assets/scss/style.scss';
+#app {}
 </style>

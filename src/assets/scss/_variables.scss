@@ -1,0 +1,31 @@
+
+$font-default: 'Lato';
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+$white: #fff;
+$black: #000;
+
+$primary-color: #A00D5B;
+$secondary-color: #F0DB44;
+$color-red : #ED2B91;
+$color-green: #0FA7BA;
+$color-green2: #1591A0;
+$text-color: $black;   
+
+
+$input-border: $black;
+$input-border-active: $primary-color;
+$error-border: red;
+$error-message: red;
+
+/* Media queries */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px
+) !default;
